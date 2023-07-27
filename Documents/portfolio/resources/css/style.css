@@ -1,0 +1,241 @@
+html {
+    scale: none;
+    overflow-x: hidden;
+}
+
+* {
+    font-size: 16px;
+}
+
+svg {
+    display:none;
+}
+
+h1 {
+    font-size: 10rem;
+}
+
+h2 {
+    font-size: 8rem;
+}
+
+/* Header/Banner/Navigaton */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+
+#banner::before, #banner::after {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    mix-blend-mode: darken;
+    mix-blend-mode:hue;
+    z-index: -2;
+}
+
+#banner::before {
+    filter: url("#grain");
+    opacity: .4;
+    height: 100vh;
+}
+
+#banner::after {
+    background: url("../images/three_birds.jpeg");
+    background-size:cover;
+    background-position:top;
+    background-repeat: no-repeat;
+}
+
+.my-photo {
+    width: 8vw;
+    height: 8vh;
+    min-width: 12rem;
+    min-height: 12rem;
+    border-radius: 50%;
+    background-color: black;
+    /*background-image: url("../images/da-logo2.svg");*/
+    background-size: cover;
+    top: 5%;
+}
+
+#nav-flag {
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    height: 100vh;
+    width: 30vw;
+    min-width: 26rem;
+    max-width: 30rem;
+    background-color: hsla(0, 0%, 20%, .5);
+    top: 0;
+    left: 5%;
+    padding: 6rem auto;
+    align-items:center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 75%;
+    margin: 1rem auto;
+}
+
+.links {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+nav li {
+    text-align: center;
+    padding: .25rem;
+    font-size: 1rem;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: hsla(60, 12%, 70%, 1 );
+}
+
+.icons {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+
+.icon {
+ max-width: 2rem;
+ margin: 0 .5rem;
+ background-color: black;
+ box-shadow: 1px 1px black;
+ border-radius: 20%;
+ padding: .25rem;
+}
+
+.icon:hover {
+    box-shadow: 2px 2px hsla(60, 12%, 70%, .5 );
+    cursor: pointer;
+}
+
+.icon:active {
+    background-color: black;
+    box-shadow: none;
+}
+
+/* Description */
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: -60vh;
+    width: 50vw;
+    right: -10%;
+    height: 20rem;
+}
+
+#full-name { 
+    font-size: 10rem;
+    font-family: 'Myriad Pro';
+    font-weight:700;
+    animation: 3s ease-in 0s 1 fadeIn;
+}
+
+.first-name {
+    text-transform: uppercase;
+    color:hsla(10, 0%, 20%, .75);
+}
+
+.last-name {
+    margin-top: -4.95rem;
+    padding: 0;
+    text-transform: uppercase;
+    color: hsla(40, 35%, 40%, .75);
+}
+
+
+.brief {
+    width: 70%;
+    height: auto;
+    color: black;
+}
+
+/* Main Section */
+main {
+    background-color: black;  
+}
+#skills:before, #skills::after {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    content: '';
+    mix-blend-mode: darken;
+    mix-blend-mode:hue;
+}
+
+#skills::before {
+    filter: url("#grain");
+    opacity: .4;
+}
+
+#skills::after {
+    background-color: black;
+}
+
+.flicks {
+    display: flex;
+    margin-left: 5%;
+    height: 100vh;
+    width: 26rem;
+    max-width: 30rem;
+    min-width: 26rem;
+}
+
+.hill {
+    position: relative;
+    width:50%;
+    background: url('../images/hillside.jpeg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.flock {
+    position: relative;
+    width:50%;
+    background: url('../images/backboard.jpeg');
+    background-size: cover;
+    background-position: 40%;
+}

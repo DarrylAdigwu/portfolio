@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Darryl Adigwu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta charset="UTF-8">
+        <link href="./resources/css/reset.css" rel="stylesheet">
+        <link href="./resources/css/style3.css" rel="stylesheet">
+    </head>
+    <body>
+        <header id="banner">
+<!--Navigation flag-->
+            <div id="nav-flag">
+                <div id="profile">
+                   <div class="my-photo"></div>
+                    <nav>
+                        <ul id="navigation">
+                            <li><a href="#">About Me</a></li>
+                            <li><a href="#">Skills</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="icons">
+                        <img src="./resources/icons/instagram.svg" class="icon" id="insta"/>
+                        <img src="./resources/icons/github.svg" class="icon" id="git"/>
+                        <img src="./resources/icons/linkedin.svg" class="icon" id="linked"/>
+                    </div>
+                </div>
+            </div>
+<!--Name Plate-->    
+            <div id="description">
+                <div id="full-name">
+                    <h1 class="first-name">Darryl</h1>
+                    <h1 class="last-name">Adigwu</h1>
+                </div>
+                <div id="intro">
+                    <p class="brief">I am an aspiring Front-End Developer, with some graphic desgin experience. Looking to utilize my technical skills and relatable experience to become a professional UX/UI designer and Web Developer.</p>
+                </div>
+            </div>
+            
+        </header>
+
+        <main>
+            <section>
+                <div id="skills">
+                    <h2 class="top">Skills</h2>
+                    <h2 class="bottom">Skills</h2>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
+
+<svg>
+    <filter id="grain">
+        <feTurbulence 
+        type="fractalnoise"
+        baseFrequency="0.65"
+        numOctaves="5"
+        stitchTiles="stitch"/>
+        <feColorMatrix values="1 0 0 9 -4
+                                1 0 0 9 -4 
+                                1 0 0 9 -4
+                                0 1 0 0 0"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain)"/>
+</svg>
