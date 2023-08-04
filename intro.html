@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Darryl Adigwu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta charset="UTF-8">
+        <link href="./resources/css/reset.css" rel="stylesheet">
+        <link href="./resources/css/style.css" rel="stylesheet">
+        <script src="./main.js" async></script>
+    </head>
+    <body>
+        <header class="banner">
+<!--Navigation flag-->
+            <div id="first-container">
+                <div id="nav-flag">
+                    <div id="profile">
+                        <nav>
+                            <ul id="navigation">
+                                <li><a href="#">About Me</a></li>
+                                <li><a href="#">Skills</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="my-photo"></div>
+                    </div>
+                </div>
+
+    <!--Name Plate-->    
+                <div id="description">
+                    <div id="full-name">
+                        <h1 class="first-name">Darryl</h1>
+                        <h1 class="last-name">Adigwu</h1>
+                    </div>
+                    <div id="intro">
+                        <p class="brief">I am an aspiring Web Developer, with a little bit of graphic desgin experience.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </header>
+<!--Main Section-->
+        <main>
+                <section id="skills">
+                    <div class="second-container">
+                        <div class="skills-grid">
+                            <div class="about-me">
+                                <p class="summary">I'm an aspiring Web Developer, with some graphic desgin experience. Looking to utilize my technical skills and relatable experience to become a professional Web Developer.</p>
+                            </div>
+                            <div class="profile"></div>
+                            <div class="tech">What I Use: <br><img src="./resources/icons/html-logo.svg" class="logos html" alt="html logo"/> <img src="./resources/icons/asset 20.svg" class="logos css logo"/></div>
+                        </div>
+                        
+                    </div>
+                </section>
+                <section id="third-page" class="projects">
+                    <div class="header-wrap">
+                            <h3 class="projects-header">Projects</h3>
+                            <h3 class="projects-header2">Projects</h3>
+                    </div>
+                    <div id="third-container" class="third-container">
+                        <div id="projects-grid">
+                            <div id="project1" class="port-sites"></div>
+                            <div id="project2" class="port-sites"></div>
+                            <div id="project3" class="port-sites"></div>
+                            <div id="project4" class="port-sites"></div>
+                            <div id="project5" class="port-sites"></div>
+                            <div id="project6" class="port-sites"></div>
+                        </div>
+                    </div>
+                    
+                </section>
+                
+            
+            
+            
+        </main>
+    </body>
+</html>
+
+<svg>
+    <filter id="grain">
+        <feTurbulence 
+        type="fractalnoise"
+        baseFrequency="0.65"
+        numOctaves="5"
+        stitchTiles="stitch"/>
+        <feColorMatrix values="1 0 0 9 -4
+                                1 0 0 9 -4 
+                                1 0 0 9 -4
+                                0 1 0 0 0"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain)"/>
+</svg>

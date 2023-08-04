@@ -1,0 +1,381 @@
+/* universal*/
+html {
+    scale: none;
+    overflow-x: hidden;
+}
+
+* {
+    font-size: 16px;
+}
+
+svg {
+    display: none;
+}
+
+h1 {
+    font-size: 10rem;
+}
+
+h2 {
+    font-size: 8rem;
+}
+ body {
+    display: block;
+ }
+ 
+/* Header/Banner/Navigaton */
+header {
+    display: flex;
+    flex-grow:1;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* background landing page */
+.banner::before, .banner::after {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    min-height: 100vh;
+    mix-blend-mode:darken;
+    mix-blend-mode: hue;
+}
+
+.banner::before {
+    filter: url("#grain");
+    opacity: .4;
+}
+
+.banner::after {
+    background: url("../images/three_birds.jpeg");
+    background-size:cover;
+    background-position:top;
+    background-repeat: no-repeat;
+}
+#first-container {
+    display: flex;
+    height: 80vh;
+    width: 90vw;
+    align-items:self-end;
+}
+
+/* Photo & Nav */
+.my-photo {
+    position: relative;
+    width: 10vw;
+    height: 10vh;
+    min-width: 16rem;
+    min-height: 16rem;
+    background-color: black;
+    opacity: .6;
+    margin: 0 auto;
+}
+
+#nav-flag {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    width: 25vw;
+    min-width: 15rem;
+    z-index: 1;
+}
+
+#profile {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* navigation */
+nav li {
+    text-align: center;
+    color: white;
+    margin: .125rem auto;
+    padding: .25rem;
+    font-size: 1rem;
+    width: 5rem;
+    background-color: hsla(10, 0%, 20%, .75);
+    border-radius: 5%;
+}
+
+nav li a {
+    color: white;
+    width: 4rem;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: hsla(60, 12%, 70%, 1);
+}
+
+/* icons */
+.icons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.icon {
+    max-width: 3rem;
+    height: auto;
+    margin: 0 .5rem;
+    padding: .25rem;
+}
+
+
+/* Description */
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+#description {
+    position: relative;
+    width: fit-content;
+    height: auto;
+    left: 5rem;
+}
+
+#full-name { 
+    width: 39rem;
+    height: 15rem;
+    font-size: 10rem;
+    font-family: 'Myriad Pro';
+    font-weight:700;
+    animation: 3s ease-in 0s 1 fadeIn;
+}
+
+.first-name {
+    text-transform: uppercase;
+    color:hsla(10, 0%, 20%, .75);
+}
+
+.last-name {
+    margin: -3.95rem 0 0 0;
+    text-transform: uppercase;
+    color: hsla(60, 100%, 100%, 0.75);
+}
+
+
+.brief {
+    width: 50%;
+    height: auto;
+    color: black;
+    font-size: 1rem;
+}
+
+/* Main Section */
+main {
+   
+}
+
+#skills {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-container { 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 90vw;
+    border: 1px solid red;
+}
+
+.skills-grid {
+    display: grid;
+    align-items:center;
+    grid-template-areas: 
+                        "about-me profile"
+                        "tech tech";
+    grid-template-columns:auto auto;
+    grid-template-rows:6rem auto;
+    gap: auto;
+}
+
+.about-me {
+    position: relative;
+    border: 1px solid red;
+    width: 14rem;
+    height: auto;
+    margin: 0rem;
+    grid-area: about-me;
+    bottom: 1rem;
+}
+
+.profile {
+    position: relative;
+    background-image: url("../images/mountain-top.jpeg");
+    background-size: cover;
+    border: 1px solid red;
+    width: 10rem;
+    height: 12rem;
+    bottom: 7.6rem;
+    margin: 1rem;
+    align-self: stretch;
+    grid-area: profile;
+}
+
+.tech {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    grid-area: tech;
+    padding-top: .5rem;
+}
+
+.logos {
+    margin-top: .5rem;
+    width: 50px;
+    height: auto
+}
+/* background third page */
+#third-page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+.projects::before, .projects::after {
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  content: '';
+  mix-blend-mode: lighten;
+  z-index: -100;
+}
+
+.projects::before {
+    filter: url('#grain');
+    opacity: .4;
+}
+.projects::after {
+    background: hsla(0, 0%, 0%, 1);
+}
+
+.header-wrap {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    writing-mode: vertical-lr;
+    height: 100vh;
+    left: -7vh;
+    overflow: hidden;
+}
+
+.projects-header {
+    writing-mode: vertical-lr;
+    font-size: 20rem;
+    color: hsla(10, 0%, 20%, .75);
+    left: -1vh;
+}
+
+.projects-header2 {
+    writing-mode: vertical-lr;
+    margin-left: -14.5rem;
+    font-size: 6rem;
+    color: hsla(90, 100%, 100%, .5);
+    text-align: center;;
+}
+
+#third-container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    width: 70vw;
+    left: 5%;
+}
+/*.projects-header:before, .projects-header:after {
+    content: '';
+    padding: .125rem;
+    width: 100%;
+    background-color: white;
+}*/
+
+
+/* Grid / Projects */
+
+#projects-grid {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+                    "project1 project2 project3"
+                    "project4 project5 project6";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:  repeat(2, 1fr);
+    gap: 10px;
+}
+
+#projects-grid #project1 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0, 0, 0, 0.25)), url('../images/message-generator.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: project1;
+}
+
+.port-sites:hover {
+    cursor: grab;
+}
+
+#projects-grid #project2 {
+    background-image:linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0, 0, 0, 0.25)), url('../images/cheatsheet.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: project2;
+}
+
+#projects-grid #project3 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0, 0, 0, 0.25)), url('../images/style-guide.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: project3;
+}
+
+#projects-grid #project4 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0, 0, 0, 0.25)), url('../images/bible-club.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: project4;
+}
+
+#projects-grid #project5 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0, 0, 0, 0.25)),url('../images/portfolio-site.jpeg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    grid-area: project5;
+}
+
+#projects-grid #project6 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url('../images/fotomatic-site.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: project6;
+}
